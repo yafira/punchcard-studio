@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- a tiny punch card: clipped corner, blush offset shadow, rows of punched slots -->
+  <path d="M7.5 8.5 H30.5 V27 H3 V13 Z" fill="#ff4f81" />
+  <path d="M6 6.5 H29 V25 H1.5 V11 Z" fill="#ffc93c" stroke="#2b1b2e" stroke-width="1.8" stroke-linejoin="round" />
+  <g fill="#2b1b2e">
+    <rect x="9" y="10" width="2" height="3.4" rx="0.5" />
+    <rect x="15" y="10" width="2" height="3.4" rx="0.5" />
+    <rect x="18" y="10" width="2" height="3.4" rx="0.5" />
+    <rect x="24" y="10" width="2" height="3.4" rx="0.5" />
+    <rect x="6" y="14.5" width="2" height="3.4" rx="0.5" />
+    <rect x="12" y="14.5" width="2" height="3.4" rx="0.5" />
+    <rect x="21" y="14.5" width="2" height="3.4" rx="0.5" />
+    <rect x="9" y="19" width="2" height="3.4" rx="0.5" />
+    <rect x="15" y="19" width="2" height="3.4" rx="0.5" />
+    <rect x="24" y="19" width="2" height="3.4" rx="0.5" />
+  </g>
+</svg>

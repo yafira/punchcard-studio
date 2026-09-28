@@ -1,5 +1,11 @@
 # punch card studio
 
+> **experimental** — none of this has been tested on an actual punch
+> card knitting machine or IBM card equipment yet. the formats follow
+> documented specs, but real-world output is unverified. i'd love to
+> change that, so if you have a machine and try it, please open an
+> issue and tell me how it went.
+
 two real punch card formats, one shared grid underneath:
 
 - **knitting machine, 24-stitch** — the punch card system shared across
@@ -34,7 +40,7 @@ strip becomes a wide short one and vice versa.
 
 ## making a real, usable punch card
 
-the knitting format now exports at true physical scale (millimeters),
+the knitting format exports at true physical scale (millimeters),
 not arbitrary pixels — necessary if you actually want to print and
 punch it, or cut it on a craft cutter.
 
@@ -57,6 +63,24 @@ software (silhouette studio, cricut design space) and cutting will be
 far more reliable than hand-punching from a printout; this is a solved
 approach other makers have used successfully on real Brother machines.
 
+## look
+
+bold and vibrant, but still soft: a cream base with four function
+colors pushed bright (blush for primary actions, matcha for
+input controls, wisteria for output/preview, butter for connective
+accents), rounded pill shapes, and dashed "running stitch" borders.
+
+- **type** — pixelify sans for display, ibm plex sans for body text,
+  ibm plex mono for labels and readouts
+- **hero card** — a real 80-column hollerith card with "PUNCH CARD
+  STUDIO" punched into it, drawn as an SVG using the same encoder as
+  the text tab
+- **favicon** — a tiny version of the same card
+- **responsive** — header, hero, and workspace share one 1200px column;
+  the hero card drops below the copy under 900px and the workspace
+  stacks into one column under 760px, with no horizontal scroll down
+  to phone width
+
 ## running it
 
 ```
@@ -72,8 +96,8 @@ then open http://localhost:3000
   ones (24 columns, 4.5mm needle pitch, IBM's 80×12 layout) kept
   separate from brand-variable defaults (reader offset, roll minimum,
   row pitch) that the machine settings panel lets you override
-- `lib/punchcard.ts` — generic grid utilities and the SVG renderer, now
-  at true millimeter scale rather than arbitrary pixels, plus the
+- `lib/punchcard.ts` — generic grid utilities and the SVG renderer, at
+  true millimeter scale rather than arbitrary pixels, plus the
   calibration swatch generator
 - `lib/dither.ts` — binary dithering, carried over from pixel picnic
 - `lib/generative.ts` — stripes/checkerboard/noise/automaton generators
@@ -86,6 +110,11 @@ then open http://localhost:3000
   `TextMode.tsx` — the four input modes
 - `components/PunchCardPreview.tsx` — shared export panel, with
   explicit print-at-100% instructions
+- `components/HeroCard.tsx` — the punched hollerith card in the hero
+- `app/layout.tsx` — fonts and metadata
+- `app/globals.css` — color tokens, hero and workspace layout, and
+  responsive breakpoints
+- `app/icon.svg` — favicon, picked up automatically by next.js
 
 ## roadmap (not yet built)
 
@@ -100,5 +129,3 @@ then open http://localhost:3000
   calibration swatch, that default can be tightened
 - **more card formats** — the format system is designed to take more
   than two
-
-

@@ -3,9 +3,9 @@
   --paper: #fff8f0;
   --ink: #2b1b2e;
 
-  /* reusing the electric craft function-color code, pushed vibrant instead
-     of pastel: blush = power/primary actions, matcha = input controls,
-     wisteria = output/preview, butter = connective/divider accents */
+  /* function colors, pushed vibrant instead of pastel: blush = power/primary
+     actions, matcha = input controls, wisteria = output/preview,
+     butter = connective/divider accents */
   --blush: #ff4f81;
   --blush-soft: #ffe1eb;
   --matcha: #4fae3d;
