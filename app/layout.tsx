@@ -22,12 +22,20 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "punch card studio",
-  description: "a punch card pattern generator for the brother 24-stitch and IBM hollerith systems — image, hand-drawn, generative, and text.",
+  description:
+    "a punch card pattern generator for the brother 24-stitch and IBM hollerith systems — image, hand-drawn, generative, and text.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${pixelifySans.variable} ${plexSans.variable} ${plexMono.variable}`}>
+    <html
+      lang="en"
+      className={`${pixelifySans.variable} ${plexSans.variable} ${plexMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

@@ -1,4 +1,5 @@
 import Workspace from "@/components/Workspace";
+import HeroCard from "@/components/HeroCard";
 
 export default function Home() {
   return (
@@ -8,7 +9,11 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          flexWrap: "wrap",
+          gap: 12,
           padding: "20px 28px",
+          maxWidth: 1200,
+          margin: "0 auto",
         }}
       >
         <div
@@ -20,6 +25,7 @@ export default function Home() {
             color: "var(--paper)",
             padding: "6px 16px",
             borderRadius: "var(--radius-pill)",
+            whiteSpace: "nowrap",
           }}
         >
           ⚡ punch card studio
@@ -29,7 +35,8 @@ export default function Home() {
         </nav>
       </header>
 
-      <section style={{ padding: "36px 28px 40px", maxWidth: 920 }}>
+      <section className="hero">
+        <div>
         <div
           className="mono"
           style={{
@@ -69,6 +76,8 @@ export default function Home() {
           format at true physical scale — with a calibration swatch to verify
           against your own machine before you punch anything for real.
         </p>
+        </div>
+        <HeroCard />
       </section>
 
       <Workspace />
@@ -77,6 +86,8 @@ export default function Home() {
         className="mono"
         style={{
           padding: "24px 28px 40px",
+          maxWidth: 1200,
+          margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
           fontSize: 11,

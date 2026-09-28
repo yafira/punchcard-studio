@@ -111,7 +111,7 @@ export default function Workspace() {
         </div>
       )}
 
-      <div style={{ display: "flex", gap: 8, marginBottom: 28 }}>
+      <div style={{ display: "flex", gap: 8, marginBottom: 28, flexWrap: "wrap" }}>
         {format.encoding === "bitmap" ? (
           <>
             <TabButton active={mode === "image"} onClick={() => setMode("image")}>image</TabButton>
@@ -127,7 +127,7 @@ export default function Workspace() {
         )}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "300px 1fr", gap: 32 }}>
+      <div className="workspace-grid">
         {format.encoding === "bitmap" && mode === "image" && (
           <ImageMode columns={format.columns} rows={rows} onGridChange={setCells} />
         )}
