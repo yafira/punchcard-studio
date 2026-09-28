@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Pixelify_Sans, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const pixelifySans = Pixelify_Sans({
@@ -8,7 +8,7 @@ const pixelifySans = Pixelify_Sans({
   weight: ["500", "600", "700"],
 });
 
-const inter = Inter({
+const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   weight: ["400", "500", "600"],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${pixelifySans.variable} ${inter.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${pixelifySans.variable} ${plexSans.variable} ${plexMono.variable}`}>
       <body>{children}</body>
     </html>
   );
