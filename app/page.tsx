@@ -43,7 +43,7 @@ export default function Home() {
             marginBottom: 20,
           }}
         >
-          concept 00 — for knitting machines, and before them
+          for knitting machines, and before them
         </div>
         <h1
           className="display"
